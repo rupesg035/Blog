@@ -1,0 +1,50 @@
+{%extends "base.html"%}
+{%load static%}
+
+{%block title%}
+ My Blog
+{%endblock%}
+
+{% block css_files %}
+<link rel ="stylesheet" href ="{% static "blog/post.css"%}"/>
+<link rel = "stylesheet" href = "{% static "blog/index.css"%}"/>
+
+
+
+{% endblock %}
+
+{%block content%}
+
+
+
+<section id = "welcome">
+<header>
+<img src= "{% static "blog/images/main.jpg" %}" alt = "RR - The Author of This Blog"/>
+
+<h2> Sony Blog</h2>
+
+</header>
+
+<p> Hello , I am Rupesh and I love Sony</p>
+
+</section>
+
+<section id ="latest-posts"> 
+
+    <h2>My latest thoughts</h2>
+    <ul>
+        {%include "blog/includes/post.html"%}
+    </ul>
+
+
+</section>
+
+<section id = "about">
+<h2> What I do</h2>
+<p> I love , I love , I love nature , I love my life with you.</p>
+<p>my gola is to live dream life with golu</p>
+
+</section>
+
+
+{%endblock%}
